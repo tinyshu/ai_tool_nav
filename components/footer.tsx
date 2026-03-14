@@ -45,11 +45,17 @@ export default function Footer() {
               >
                 免责声明
               </Link>
+              <Link 
+                href="/contact" 
+                className="text-foreground hover:text-primary transition-colors text-sm"
+              >
+                联系我们
+              </Link>
             </nav>
             
             {/* Email icon */}
             <Link 
-              href="mailto:contact@aitoolbox.com" 
+              href="mailto:2690540630@qq.com" 
               className="w-10 h-10 rounded-full border border-border flex items-center justify-center hover:bg-accent transition-colors"
             >
               <Mail className="w-5 h-5 text-muted-foreground" />

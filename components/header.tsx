@@ -107,9 +107,11 @@ export default function Header() {
             )}
           </div>
 
-          <Button variant="ghost" className="text-sm gap-1">
-            <User className="h-4 w-4" /> 联系站长
-          </Button>
+          <Link href="/contact">
+            <Button variant="ghost" className="text-sm gap-1">
+              <User className="h-4 w-4" /> 联系站长
+            </Button>
+          </Link>
         </nav>
 
         {/* Right section */}
