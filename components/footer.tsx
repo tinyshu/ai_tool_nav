@@ -57,17 +57,6 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom copyright */}
-        <div className="mt-8 pt-6 border-t border-border">
-          <div className="flex flex-wrap items-center justify-center gap-2 text-sm text-muted-foreground">
-            <span>Copyright © 2026 AI导航</span>
-            <span className="hidden sm:inline">蜀ICP备2025170023号-2</span>
-            <span className="flex items-center gap-1">
-              <span className="w-4 h-4 rounded-full bg-gradient-to-r from-red-500 to-yellow-500 inline-block"></span>
-              川公网安备 51015602001423号
-            </span>
-          </div>
-        </div>
       </div>
     </footer>
   )
