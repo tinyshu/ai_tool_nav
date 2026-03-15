@@ -21,6 +21,7 @@ import {
   User,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { SearchPopover } from "@/components/search-popover"
 import { cn } from "@/lib/utils"
 
 const categories = [
@@ -41,7 +42,9 @@ const categories = [
 
 export default function Header() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false)
+  const [searchOpen, setSearchOpen] = useState(false)
   const dropdownRef = useRef<HTMLDivElement>(null)
+  const searchAnchorRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -120,9 +123,21 @@ export default function Header() {
             <span>Ctrl+D或⌘+D收藏本站</span>
             <span className="text-primary font-medium">「每周更新最新AI工具」</span>
           </div>
-          <Button variant="ghost" size="icon">
-            <Search className="h-5 w-5" />
-          </Button>
+          <div className="relative" ref={searchAnchorRef}>
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => setSearchOpen((v) => !v)}
+              aria-label="站内搜索"
+            >
+              <Search className="h-5 w-5" />
+            </Button>
+            <SearchPopover
+              open={searchOpen}
+              onClose={() => setSearchOpen(false)}
+              anchorRef={searchAnchorRef}
+            />
+          </div>
         </div>
       </div>
     </header>
