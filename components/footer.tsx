@@ -6,17 +6,18 @@ export default function Footer() {
     <footer className="bg-muted/30 border-t mt-12">
       <div className="max-w-7xl mx-auto px-6 py-10">
         <div className="flex flex-col md:flex-row justify-between gap-8">
-          {/* Left side - Logo and description */}
+          {/* Left side - Logo and description（与 Header 一致） */}
           <div className="max-w-xl">
-            {/* Logo */}
-            <div className="flex items-center gap-2 mb-4">
-              <div className="flex items-center">
-                <span className="text-2xl font-bold bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
-                  AI
-                </span>
-                <span className="text-2xl font-bold text-foreground">导航</span>
+            {/* Logo - 点击返回首页 */}
+            <Link href="/" className="inline-flex items-center gap-2 mb-4 hover:opacity-90 transition-opacity">
+              <div className="flex items-center justify-center w-10 h-10 rounded-full bg-primary/10">
+                <span className="text-xl font-bold text-primary">AI</span>
               </div>
-            </div>
+              <span className="text-xl font-bold">
+                <span className="text-primary">AI</span>
+                <span className="text-foreground">导航</span>
+              </span>
+            </Link>
             
             {/* Description */}
             <p className="text-muted-foreground text-sm leading-relaxed">
