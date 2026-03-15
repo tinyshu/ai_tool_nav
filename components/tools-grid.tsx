@@ -55,6 +55,7 @@ export default function ToolsGrid({ activeCategory }: ToolsGridProps) {
             color={tool.color}
             url={tool.url}
             featured={tool.featured}
+            image={tool.image}
           />
         ))}
       </div>

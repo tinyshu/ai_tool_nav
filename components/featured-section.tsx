@@ -9,6 +9,7 @@ interface Tool {
   color: string
   url: string
   featured?: boolean
+  image?: string
 }
 
 interface FeaturedSectionProps {
@@ -51,6 +52,7 @@ export default function FeaturedSection({ type, tools }: FeaturedSectionProps) {
             color={tool.color}
             url={tool.url}
             featured={tool.featured}
+            image={tool.image}
           />
         ))}
       </div>

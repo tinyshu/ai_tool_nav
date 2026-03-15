@@ -9,6 +9,8 @@ export type ToolItem = {
   color: string
   url: string
   featured?: boolean
+  /** 可选：真图片文件名（位于 public/tools/ 下，如 "lingdong.png"） */
+  image?: string
 }
 
 export type ToolWithCategory = ToolItem & { category: string }
@@ -63,7 +65,7 @@ export const categoryNameToId: Record<string, string> = Object.fromEntries(
 
 export const toolsData: Record<string, ToolItem[]> = {
   AI办公工具: [
-    { name: "凌动AI", description: "免费上传PDF，支持真AI总结...", icon: "PDF", color: "bg-gradient-to-br from-pink-500 to-red-500", url: "https://lingdong.ai", featured: true },
+    { name: "凌动AI", description: "免费上传PDF，支持真AI总结...", icon: "PDF", color: "bg-gradient-to-br from-pink-500 to-red-500", url: "https://lingdong.ai", featured: true, image: "lingdong.png" },
     { name: "玫瑰克隆工具", description: "AI图文笔记一键生成创作并自...", icon: "玫", color: "bg-gradient-to-br from-pink-400 to-rose-500", url: "https://meigui.ai", featured: true },
     { name: "PicDoc", description: "PicDoc是一款AI驱动的文本...", icon: "P", color: "bg-gradient-to-br from-purple-500 to-violet-600", url: "https://picdoc.ai" },
     { name: "萝卜简历", description: "萝卜简历（www.luobojl.cn）...", icon: "萝", color: "bg-gradient-to-br from-orange-400 to-amber-500", url: "https://www.luobojl.cn" },
@@ -115,22 +117,22 @@ export const toolsData: Record<string, ToolItem[]> = {
     { name: "Bolt", description: "AI全栈开发助手", icon: "B", color: "bg-gradient-to-br from-blue-500 to-indigo-600", url: "https://bolt.new" },
   ],
   AI写作工具: [
-    { name: "ChatGPT", description: "OpenAI推出的AI对话助手", icon: "G", color: "bg-gradient-to-br from-green-500 to-teal-500", url: "https://chat.openai.com", featured: true },
-    { name: "Claude", description: "Anthropic推出的AI助手", icon: "C", color: "bg-gradient-to-br from-orange-400 to-amber-500", url: "https://claude.ai", featured: true },
-    { name: "文心一言", description: "百度推出的AI写作助手", icon: "文", color: "bg-gradient-to-br from-blue-500 to-indigo-600", url: "https://yiyan.baidu.com" },
-    { name: "通义千问", description: "阿里推出的AI大模型", icon: "通", color: "bg-gradient-to-br from-purple-500 to-violet-600", url: "https://tongyi.aliyun.com" },
-    { name: "Jasper", description: "AI营销内容写作工具", icon: "J", color: "bg-gradient-to-br from-blue-400 to-cyan-500", url: "https://www.jasper.ai" },
-    { name: "Copy.ai", description: "AI文案生成工具", icon: "Co", color: "bg-gradient-to-br from-purple-400 to-pink-500", url: "https://www.copy.ai" },
-    { name: "Writesonic", description: "AI内容创作平台", icon: "W", color: "bg-gradient-to-br from-blue-500 to-purple-500", url: "https://writesonic.com" },
-    { name: "秘塔写作猫", description: "AI中文写作助手", icon: "秘", color: "bg-gradient-to-br from-orange-400 to-red-500", url: "https://xiezuocat.com" },
+    { name: "ChatGPT", description: "OpenAI推出的AI对话助手", icon: "G", color: "bg-gradient-to-br from-green-500 to-teal-500", url: "https://chat.openai.com", featured: true, image: "chatgpt.png" },
+    { name: "Claude", description: "Anthropic推出的AI助手", icon: "C", color: "bg-gradient-to-br from-orange-400 to-amber-500", url: "https://claude.ai", featured: true, image: "claude.png" },
+    { name: "文心一言", description: "百度推出的AI写作助手", icon: "文", color: "bg-gradient-to-br from-blue-500 to-indigo-600", url: "https://yiyan.baidu.com",image:"wenxin.png" },
+    { name: "通义千问", description: "阿里推出的AI大模型", icon: "通", color: "bg-gradient-to-br from-purple-500 to-violet-600", url: "https://tongyi.aliyun.com" ,image:"tongyiqianwen.png"},
+    { name: "Jasper", description: "AI营销内容写作工具", icon: "J", color: "bg-gradient-to-br from-blue-400 to-cyan-500", url: "https://www.jasper.ai", image: "jasper.png" },
+    { name: "Copy.ai", description: "AI文案生成工具", icon: "Co", color: "bg-gradient-to-br from-purple-400 to-pink-500", url: "https://www.copy.ai" ,image:"copy.png"},
+    { name: "Writesonic", description: "AI内容创作平台", icon: "W", color: "bg-gradient-to-br from-blue-500 to-purple-500", url: "https://writesonic.com" ,image:"writesonic.png"},
+    { name: "秘塔写作猫", description: "AI中文写作助手", icon: "秘", color: "bg-gradient-to-br from-orange-400 to-red-500", url: "https://xiezuocat.com", image:"xiezuocat.png" },
   ],
   AI对话工具: [
-    { name: "ChatGPT", description: "OpenAI推出的AI对话助手", icon: "G", color: "bg-gradient-to-br from-green-500 to-teal-500", url: "https://chat.openai.com", featured: true },
+    { name: "ChatGPT", description: "OpenAI推出的AI对话助手", icon: "G", color: "bg-gradient-to-br from-green-500 to-teal-500", url: "https://chat.openai.com", featured: true, image: "chatgpt.png" },
     { name: "Claude", description: "Anthropic推出的AI助手", icon: "C", color: "bg-gradient-to-br from-orange-400 to-amber-500", url: "https://claude.ai", featured: true },
     { name: "Gemini", description: "Google推出的AI助手", icon: "G", color: "bg-gradient-to-br from-blue-400 to-cyan-500", url: "https://gemini.google.com" },
-    { name: "Kimi", description: "月之暗面推出的AI助手", icon: "K", color: "bg-gradient-to-br from-purple-500 to-indigo-600", url: "https://kimi.moonshot.cn" },
-    { name: "豆包", description: "字节跳动推出的AI助手", icon: "豆", color: "bg-gradient-to-br from-blue-500 to-purple-500", url: "https://www.doubao.com" },
-    { name: "智谱清言", description: "智谱AI推出的AI助手", icon: "智", color: "bg-gradient-to-br from-blue-400 to-blue-600", url: "https://chatglm.cn" },
+    { name: "Kimi", description: "月之暗面推出的AI助手", icon: "K", color: "bg-gradient-to-br from-purple-500 to-indigo-600", url: "https://kimi.moonshot.cn",image:"kimi.png" },
+    { name: "豆包", description: "字节跳动推出的AI助手", icon: "豆", color: "bg-gradient-to-br from-blue-500 to-purple-500", url: "https://www.doubao.com" ,image:"doubao.png"},
+    { name: "智谱清言", description: "智谱AI推出的AI助手", icon: "智", color: "bg-gradient-to-br from-blue-400 to-blue-600", url: "https://chatglm.cn",image:"zhipuqingyan.png" },
   ],
   AI开发平台: [
     { name: "OpenAI API", description: "OpenAI开放API平台", icon: "O", color: "bg-gradient-to-br from-green-500 to-teal-500", url: "https://platform.openai.com", featured: true },

@@ -43,6 +43,7 @@ export default function CategoryPage({ params }: { params: Promise<{ id: string 
               color={tool.color}
               url={tool.url}
               featured={tool.featured}
+              image={tool.image}
             />
           ))}
         </div>
