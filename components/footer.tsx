@@ -10,18 +10,15 @@ export default function Footer() {
           <div className="max-w-xl">
             {/* Logo - 点击返回首页 */}
             <Link href="/" className="inline-flex items-center gap-2 mb-4 hover:opacity-90 transition-opacity">
-              <div className="flex items-center justify-center w-10 h-10 rounded-full bg-primary/10">
-                <span className="text-xl font-bold text-primary">AI</span>
-              </div>
               <span className="text-xl font-bold">
                 <span className="text-primary">AI</span>
-                <span className="text-foreground">导航</span>
+                <span className="text-foreground">工具导航</span>
               </span>
             </Link>
             
             {/* Description */}
             <p className="text-muted-foreground text-sm leading-relaxed">
-              AI导航致力于收录与更新全球AI工具，现已涵盖数百种不同类型。同时，我们为您精选常用的学习资源、开发框架与模型，助您轻松融入人工智能浪潮，高效实现自动化。按 Ctrl + D 或 ⌘ + D 可一键收藏本站。
+              AI工具导航致力于收录与更新全球AI工具，现已涵盖数百种不同类型。同时，我们为您精选常用的学习资源、开发框架与模型，助您轻松融入人工智能浪潮，高效实现自动化。按 Ctrl + D 或 ⌘ + D 可一键收藏本站。
             </p>
           </div>
 
@@ -32,7 +29,7 @@ export default function Footer() {
                 href="/" 
                 className="text-foreground hover:text-primary transition-colors text-sm"
               >
-                AI导航
+                AI工具导航
               </Link>
               <Link 
                 href="/about" 

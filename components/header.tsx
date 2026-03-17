@@ -61,12 +61,9 @@ export default function Header() {
       <div className="flex h-16 items-center justify-between px-4">
         {/* Logo - 点击返回首页 */}
         <Link href="/" className="flex items-center gap-2 hover:opacity-90 transition-opacity">
-          <div className="flex items-center justify-center w-10 h-10 rounded-full bg-primary/10">
-            <span className="text-xl font-bold text-primary">AI</span>
-          </div>
           <span className="text-xl font-bold">
             <span className="text-primary">AI</span>
-            <span className="text-foreground">导航</span>
+            <span className="text-foreground">工具导航</span>
           </span>
         </Link>
 

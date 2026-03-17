@@ -7,7 +7,7 @@ const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'AI导航 - 发现最新AI工具',
+  title: 'AI工具导航 - 发现最新AI工具',
   description: '每周更新最新AI工具，涵盖AI办公、图像、编程、写作、对话等多种分类',
   generator: 'v0.app',
   icons: {
