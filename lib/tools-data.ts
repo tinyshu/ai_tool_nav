@@ -11,6 +11,8 @@ export type ToolItem = {
   featured?: boolean
   /** 可选：真图片文件名（位于 public/tools/ 下，如 "lingdong.png"） */
   image?: string
+  /** 可选：收录时间，使用整型时间戳（秒） */
+  addedAt?: number
 }
 
 export type ToolWithCategory = ToolItem & { category: string }
@@ -65,8 +67,8 @@ export const categoryNameToId: Record<string, string> = Object.fromEntries(
 
 export const toolsData: Record<string, ToolItem[]> = {
   AI办公工具: [
-    { name: "凌动AI", description: "免费上传PDF，支持真AI总结...", icon: "PDF", color: "bg-gradient-to-br from-pink-500 to-red-500", url: "https://lingdong.ai", featured: true, image: "lingdong.png" },
-    { name: "玫瑰克隆工具", description: "AI图文笔记一键生成创作并自...", icon: "玫", color: "bg-gradient-to-br from-pink-400 to-rose-500", url: "https://meigui.ai", featured: true, image: "meigui.png" },
+    { name: "凌动AI", description: "免费上传PDF，支持真AI总结...", icon: "PDF", color: "bg-gradient-to-br from-pink-500 to-red-500", url: "https://lingdong.ai", featured: true, image: "lingdong.png" ,addedAt:1773724362},
+    { name: "玫瑰克隆工具", description: "AI图文笔记一键生成创作并自...", icon: "玫", color: "bg-gradient-to-br from-pink-400 to-rose-500", url: "https://meigui.ai", featured: true, image: "meigui.png" ,addedAt:1773724365},
     { name: "PicDoc", description: "PicDoc是一款AI驱动的文本...", icon: "P", color: "bg-gradient-to-br from-purple-500 to-violet-600", url: "https://picdoc.ai" ,image:"picdoc.png"},
     { name: "萝卜简历", description: "萝卜简历（www.luobojl.cn）...", icon: "萝", color: "bg-gradient-to-br from-orange-400 to-amber-500", url: "https://www.luobojl.cn", image:"luobojl.png" },
     { name: "标探长AI标书", description: "标探长AI标书智能体，10分...", icon: "标", color: "bg-gradient-to-br from-blue-500 to-cyan-500", url: "https://biaotanzhang.com" ,image:"biaotanzhang.png"},
@@ -83,15 +85,15 @@ export const toolsData: Record<string, ToolItem[]> = {
     { name: "万知", description: "零一万物推出的一站式AI文档...", icon: "万", color: "bg-gradient-to-br from-teal-500 to-emerald-500", url: "https://www.wanzhi.com",image:"wanzhi.png" },
     { name: "办公小浣熊", description: "AI数据文件处理助手", icon: "熊", color: "bg-gradient-to-br from-gray-600 to-gray-700", url: "https://raccoon.sensetime.com",image:"xiaohuanxiong.png" },
     { name: "百度 GBI", description: "AI商业智能平台", icon: "GBI", color: "bg-gradient-to-br from-blue-500 to-indigo-600", url: "https://gbi.baidu.com",image:"baidugbi.png" },
-    { name: "WPS AI", description: "WPS推出的AI智能办公助手", icon: "W", color: "bg-gradient-to-br from-red-500 to-rose-600", url: "https://ai.wps.cn",image:"wpsai.png" },
+    { name: "WPS AI", description: "WPS推出的AI智能办公助手", icon: "W", color: "bg-gradient-to-br from-red-500 to-rose-600", url: "https://ai.wps.cn",image:"wpsai.png" ,addedAt:1773724366},
     { name: "包阅AI", description: "即时提炼总结，高效获取答案", icon: "阅", color: "bg-gradient-to-br from-blue-400 to-cyan-500", url: "https://baoyue.ai",image:"baoyueai.png" },
   ],
   AI图像工具: [
     { name: "Bing Image Editor", description: "BING图片生成器", icon: "B", color: "bg-gradient-to-br from-blue-500 to-cyan-500", url: "https://www.bing.com/images/create", featured: true ,image:"bingimageeditor.png"},
     { name: "MoPNG设计助手", description: "MoPNG设计助手，AI图片编...", icon: "Mo", color: "bg-gradient-to-br from-purple-500 to-pink-500", url: "https://mopng.com", featured: true ,image:"mopng.png"},
     { name: "妙图设计", description: "妙图设计（MagiqSight）是...", icon: "妙", color: "bg-gradient-to-br from-gray-600 to-gray-700", url: "https://magiqsight.com" },
-    { name: "face swap ai", description: "Create stunning face swaps i...", icon: "F", color: "bg-gradient-to-br from-cyan-400 to-blue-500", url: "https://faceswap.ai" ,image:"faceswapai.png"},
-    { name: "潮际好麦", description: "潮际好麦是一款专为电商平...", icon: "潮", color: "bg-gradient-to-br from-red-500 to-orange-500", url: "https://chaojimai.com" ,image:"chaojimai.png"},
+    { name: "face swap ai", description: "Create stunning face swaps i...", icon: "F", color: "bg-gradient-to-br from-cyan-400 to-blue-500", url: "https://faceswap.ai" ,image:"faceswapai.png",addedAt:1773724368},
+    { name: "潮际好麦", description: "潮际好麦是一款专为电商平...", icon: "潮", color: "bg-gradient-to-br from-red-500 to-orange-500", url: "https://chaojimai.com" ,image:"chaojimai.png",addedAt:1773724369},
     { name: "稿定AI", description: "稿定AI-更懂设计师的AI创意...", icon: "稿", color: "bg-gradient-to-br from-red-400 to-rose-500", url: "https://www.gaoding.com",image:"gaodingai.png" },
     { name: "PicDoc", description: "PicDoc是一款AI驱动的文本...", icon: "P", color: "bg-gradient-to-br from-purple-500 to-violet-600", url: "https://picdoc.ai",image:"picdoc.png" },
     { name: "风车AI翻译", description: "风车AI翻译-AI跨境图片翻译...", icon: "风", color: "bg-gradient-to-br from-blue-400 to-indigo-500", url: "https://fengcheai.com",image:"fengcheai.png" },
@@ -101,14 +103,14 @@ export const toolsData: Record<string, ToolItem[]> = {
     { name: "博思白板", description: "博思云创推出的AI多功能白...", icon: "博", color: "bg-gradient-to-br from-blue-400 to-blue-600", url: "https://boardmix.cn" ,image:"bosiban.png"},
     { name: "360智图", description: "360智图是一个专业的图片版...", icon: "360", color: "bg-gradient-to-br from-green-500 to-teal-500", url: "https://zhitu.360.cn" ,image:"zhitu.png"},
     { name: "Stable Diffusion", description: "Stable Diffusion是一款先进...", icon: "S", color: "bg-gradient-to-br from-purple-600 to-indigo-600", url: "https://stability.ai",image:"stablediffusion.png" },
-    { name: "Midjourney", description: "Midjourney是'文生图'届的扛...", icon: "M", color: "bg-gradient-to-br from-gray-700 to-gray-800", url: "https://www.midjourney.com",image:"midjourney.png" },
+    { name: "Midjourney", description: "Midjourney是'文生图'届的扛...", icon: "M", color: "bg-gradient-to-br from-gray-700 to-gray-800", url: "https://www.midjourney.com",image:"midjourney.png" ,addedAt:1773724367},
     { name: "DALL-E 3", description: "OpenAI推出的AI图像生成工具", icon: "D", color: "bg-gradient-to-br from-green-500 to-teal-500", url: "https://openai.com/dall-e-3",image:"dalle3.png" },
     { name: "Leonardo AI", description: "专业AI图像生成平台", icon: "L", color: "bg-gradient-to-br from-purple-500 to-indigo-600", url: "https://leonardo.ai" ,image:"leonardoai.png"},
     { name: "Firefly", description: "Adobe推出的AI图像生成工具", icon: "Ff", color: "bg-gradient-to-br from-orange-500 to-red-500", url: "https://firefly.adobe.com",image:"firefly.png" },
   ],
   AI编程工具: [
     { name: "GitHub Copilot", description: "AI代码补全工具", icon: "GH", color: "bg-gradient-to-br from-gray-700 to-gray-900", url: "https://github.com/features/copilot", featured: true ,image:"githubcopilot.png"},
-    { name: "Cursor", description: "AI驱动的代码编辑器", icon: "C", color: "bg-gradient-to-br from-purple-500 to-indigo-600", url: "https://cursor.sh", featured: true,image:"cursor.png" },
+    { name: "Cursor", description: "AI驱动的代码编辑器", icon: "C", color: "bg-gradient-to-br from-purple-500 to-indigo-600", url: "https://cursor.sh", featured: true,image:"cursor.png" ,addedAt:1773724370},
     { name: "Tabnine", description: "AI代码自动补全", icon: "T", color: "bg-gradient-to-br from-orange-400 to-red-500", url: "https://www.tabnine.com",image:"tabnine.png" },
     { name: "CodeWhisperer", description: "Amazon AI编程助手", icon: "A", color: "bg-gradient-to-br from-orange-500 to-amber-500", url: "https://aws.amazon.com/codewhisperer",image:"codewhisperer.png" },
     { name: "Codeium", description: "免费AI代码补全工具", icon: "Ci", color: "bg-gradient-to-br from-teal-500 to-cyan-500", url: "https://codeium.com",image:"codeium.png" },
