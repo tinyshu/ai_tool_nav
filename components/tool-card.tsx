@@ -58,11 +58,6 @@ export default function ToolCard({
           <div className="flex-1 min-w-0">
             <div className="flex items-center gap-2">
               <h3 className="font-medium text-foreground truncate">{name}</h3>
-              {featured && (
-                <Badge variant="secondary" className="bg-primary/10 text-primary text-xs shrink-0">
-                  常用
-                </Badge>
-              )}
             </div>
             <p className="mt-1 text-sm text-muted-foreground line-clamp-2">
               {description}

@@ -139,7 +139,7 @@ export const toolsData: Record<string, ToolItem[]> = {
     { name: "Together AI", description: "开源AI模型平台", icon: "T", color: "bg-gradient-to-br from-blue-500 to-indigo-600", url: "https://www.together.ai", image: "togetherai.png" },
   ],
   AI搜索引擎: [
-    { name: "Perplexity", description: "AI驱动的搜索引擎", icon: "P", color: "bg-gradient-to-br from-teal-400 to-cyan-500", url: "https://www.perplexity.ai", featured: true, image:"perplexity.png" },
+    { name: "Perplexity", description: "Perplexity是一个ChatGPT和谷歌结合的超级工具", icon: "P", color: "bg-gradient-to-br from-teal-400 to-cyan-500", url: "https://www.perplexity.ai", featured: true, image:"perplexity.png" },
     { name: "秘塔搜索", description: "AI智能搜索引擎", icon: "秘", color: "bg-gradient-to-br from-blue-500 to-indigo-600", url: "https://metaso.cn", featured: true, image:"metaso.png" },
     { name: "天工AI搜索", description: "昆仑万维推出的AI搜索", icon: "天", color: "bg-gradient-to-br from-purple-500 to-pink-500", url: "https://www.tiangong.cn", image:"tiangong.png" },
     { name: "纳米AI", description: "360推出的AI搜索引擎", icon: "360", color: "bg-gradient-to-br from-green-500 to-teal-500", url: "https://so.360.com", image:"360ai.png" },
@@ -162,7 +162,7 @@ export const toolsData: Record<string, ToolItem[]> = {
     { name: "Canva AI", description: "Canva的AI设计功能", icon: "C", color: "bg-gradient-to-br from-cyan-400 to-blue-500", url: "https://www.canva.com", featured: true ,image:"canva.png"},
     { name: "即时AI", description: "即时设计的AI功能", icon: "即", color: "bg-gradient-to-br from-purple-500 to-indigo-600", url: "https://js.design", featured: true ,image:"jsdesign.png"},
     { name: "Figma AI", description: "Figma的AI设计功能", icon: "F", color: "bg-gradient-to-br from-purple-400 to-pink-500", url: "https://www.figma.com" ,image:"figma.png"},
-    { name: "美图设计室", description: "美图推出的AI设计工具", icon: "美", color: "bg-gradient-to-br from-pink-500 to-rose-500", url: "https://www.designkit.com" ,image:"designkit.png"},
+    { name: "美图设计室", description: "美图推出的AI设计工具", icon: "美", color: "bg-gradient-to-br from-pink-500 to-rose-500", url: "https://www.designkit.cn" ,image:"designkit.png"},
   ],
   AI音频工具: [
     { name: "Suno AI", description: "AI音乐生成工具", icon: "S", color: "bg-gradient-to-br from-purple-500 to-pink-500", url: "https://suno.ai", featured: true,image:"suno.png" },
