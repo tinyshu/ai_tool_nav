@@ -31,12 +31,14 @@ export const subCategories: Record<string, string[]> = {
   AI音频工具: ["常用AI音频工具", "AI语音合成", "AI音乐生成"],
   AI娱乐工具: ["常用AI娱乐工具", "AI游戏", "AI创意"],
   其他AI工具: ["常用其他工具", "AI学习", "AI生活"],
+  便民工具: ["常用便民工具"],
 }
 
 export const categoryOrder = [
   "AI办公工具", "AI图像工具", "AI编程工具", "AI写作工具", "AI对话工具",
   "AI开发平台", "AI搜索引擎", "AI翻译工具", "AI视频工具", "AI设计工具",
-  "AI音频工具", "AI娱乐工具", "其他AI工具",
+  "AI音频工具", "AI娱乐工具", "便民工具",
+  "其他AI工具",
 ] as const
 
 export const categories = [
@@ -52,6 +54,7 @@ export const categories = [
   { id: "design", name: "AI设计工具" },
   { id: "audio", name: "AI音频工具" },
   { id: "entertainment", name: "AI娱乐工具" },
+  { id: "convenience", name: "便民工具" },
   { id: "other", name: "其他AI工具" },
 ] as const
 
@@ -103,6 +106,7 @@ export const toolsData: Record<string, ToolItem[]> = {
     { name: "DALL-E 3", description: "OpenAI推出的AI图像生成工具", icon: "D", color: "bg-gradient-to-br from-green-500 to-teal-500", url: "https://openai.com/dall-e-3",image:"dalle3.png" },
     { name: "Leonardo AI", description: "专业AI图像生成平台", icon: "L", color: "bg-gradient-to-br from-purple-500 to-indigo-600", url: "https://leonardo.ai" ,image:"leonardoai.png"},
     { name: "Firefly", description: "Adobe推出的AI图像生成工具", icon: "Ff", color: "bg-gradient-to-br from-orange-500 to-red-500", url: "https://firefly.adobe.com",image:"firefly.png" },
+    { name: "哼哼猫去水印", description: "可以去掉几乎任何网页上的音乐和视频水印", icon: "X", color: "bg-gradient-to-br from-orange-500 to-red-500", url: "https://firefly.adobe.com",image:"henhenmao.png" },
   ],
   AI编程工具: [
     { name: "GitHub Copilot", description: "AI代码补全工具", icon: "GH", color: "bg-gradient-to-br from-gray-700 to-gray-900", url: "https://github.com/features/copilot", featured: true ,image:"githubcopilot.png"},
@@ -178,7 +182,33 @@ export const toolsData: Record<string, ToolItem[]> = {
   其他AI工具: [
     { name: "Notion AI", description: "Notion的AI写作助手", icon: "N", color: "bg-gradient-to-br from-gray-700 to-gray-900", url: "https://www.notion.so", featured: true ,image:"notion.png"},
     { name: "Zapier AI", description: "AI自动化工作流程", icon: "Z", color: "bg-gradient-to-br from-orange-500 to-amber-500", url: "https://zapier.com" ,image:"zapier.png"},
-    { name: "Arc AI", description: "腾出旗下ARC实验室推出免费AI图片处理工具", icon: "A", color: "bg-gradient-to-br from-blue-400 to-purple-500", url: "https://arc.tencent.com" ,image:"arc.png"},
+    { name: "Arc AI", description: "腾出ARC免费AI图片工具", icon: "A", color: "bg-gradient-to-br from-blue-400 to-purple-500", url: "https://arc.tencent.com" ,image:"arc.png"},
+  ],
+  便民工具: [
+    { name: "证件照在线制作", description: "在线制作证件照", icon: "证", color: "bg-gradient-to-br from-blue-500 to-cyan-500", url: "https://www.baidu.com/s?wd=证件照在线制作",image:"zhenjianzhao.png"},
+    { name: "支付宝音效", description: "一键生成支付宝导致音效", icon: "赞", color: "bg-gradient-to-br from-pink-500 to-rose-500", url: "https://toolwa.com/receipt" ,image:"zhifubaoyx.png"},
+    { name: "可赞AI", description: "文字一键可视化生成海报/配图", icon: "赞", color: "bg-gradient-to-br from-pink-500 to-rose-500", url: "https://kezign.cn" ,image:"kezhanai.png"},
+    { name: "全景故宫", description: "在线浏览故宫全景与展馆导览", icon: "宫", color: "bg-gradient-to-br from-amber-500 to-orange-500", url: "https://pano.dpm.org.cn" ,image:"gongjing.png"},
+    { name: "迷宫生成器", description: "随机生成迷宫可用于游戏", icon: "迷", color: "bg-gradient-to-br from-purple-500 to-indigo-600", url: "https://toolwa.com/maze",image:"mijun.png" },
+    { name: "丑萌头像生成器", description: "生成趣味头像，简单有趣", icon: "丑", color: "bg-gradient-to-br from-emerald-500 to-teal-600", url: "https://toolwa.com/ugly-avatar",image:"choumeng.png" },
+    { name: "让我帮你百度一下", description: "生成“让我帮你百度一下”链接", icon: "度", color: "bg-gradient-to-br from-blue-600 to-blue-700", url: "https://btfy.ur1.fun",image:"wobang.png" },
+
+    { name: "英文大小写转换", description: "英文大小写快速转换", icon: "Aa", color: "bg-gradient-to-br from-slate-600 to-slate-800", url: "https://toolwa.com/case-convert",image:"yingwen.png" },
+    { name: "特殊符号大全", description: "常用特殊符号、表情与字符合集", icon: "∞", color: "bg-gradient-to-br from-cyan-500 to-blue-600", url: "https://toolwa.com/symbol",image:"teshu.png"  },
+    { name: "DNS检测", description: "查询域名解析与 DNS 记录信息", icon: "DNS", color: "bg-gradient-to-br from-violet-500 to-purple-600", url: "https://toolwa.com/dns",image:"dns.png" },
+    { name: "密码安全检测", description: "检测密码强度与安全性提示", icon: "盾", color: "bg-gradient-to-br from-green-500 to-emerald-600", url: "https://toolwa.com/pwcheck",image:"mima.png"},
+    { name: "随机密码生成", description: "一键生成强随机密码", icon: "钥", color: "bg-gradient-to-br from-orange-500 to-red-500", url: "https://toolwa.com/password-gen",image:"suijimima.png" },
+    { name: "2FA 双重验证码", description: "在线生成/校验2FA动态验证码", icon: "2FA", color: "bg-gradient-to-br from-sky-500 to-indigo-600", url: "https://toolwa.com/totp",image:"2fa.png" },
+
+    { name: "手机号码归属地查询", description: "查询手机号归属地与运营商信息", icon: "机", color: "bg-gradient-to-br from-blue-500 to-indigo-600", url: "https://toolwa.com/phone",image:"shouji.png" },
+    { name: "汽车 VIN码/车架号", description: "查询 VIN/车架号信息", icon: "车", color: "bg-gradient-to-br from-gray-700 to-gray-900", url: "https://toolwa.com/vin",image:"chevin.png"},
+    { name: "MAC 地址查询厂商", description: "通过MAC地址前缀查询设备厂商", icon: "MAC", color: "bg-gradient-to-br from-teal-500 to-cyan-600", url: "https://toolwa.com/mac",image:"macshangcha.png"},
+    { name: "菊花文生成器", description: "生成“菊花文/火星文”风格文本", icon: "菊", color: "bg-gradient-to-br from-pink-500 to-purple-600", url: "https://toolwa.com/juhua",image:"juhua.png" },
+
+    { name: "鱼缸测试", description: "测试显示器坏点/色彩", icon: "鱼", color: "bg-gradient-to-br from-cyan-500 to-teal-600", url: "https://toolwa.com/fish",image:"yugang.png" },
+    { name: "毒蘑菇测试", description: "测试显示器响应/拖影", icon: "菇", color: "bg-gradient-to-br from-lime-500 to-emerald-600", url: "https://toolwa.com/vsbm",image:"dumogu.png" },
+    { name: "条码生成工具", description: "在线生成条形码/二维码", icon: "码", color: "bg-gradient-to-br from-zinc-600 to-zinc-800", url: "https://toolwa.com/barcode",image:"tiaoxingma.png" },
+    { name: "图片加水印", description: "给图片批量添加文字/图片水印", icon: "印", color: "bg-gradient-to-br from-rose-500 to-orange-500", url: "https://toolwa.com/watermark",image:"tupianshuiyin.png" },
   ],
 }
 

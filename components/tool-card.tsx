@@ -29,7 +29,7 @@ export default function ToolCard({
   const imageSrc = image ? `${TOOLS_IMAGE_BASE}/${image}` : null
 
   return (
-    <Link href={url} target="_blank" rel="noopener noreferrer">
+    <Link href={url} target="_blank" rel="noopener noreferrer" className="block h-full">
       <Card className="group relative overflow-hidden p-4 hover:shadow-lg transition-all duration-300 cursor-pointer border hover:border-primary/20 h-full">
         <div className="flex items-start gap-3">
           {/* Icon / Image */}

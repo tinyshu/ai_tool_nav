@@ -25,6 +25,7 @@ export default function Home() {
       "AI设计工具": "design",
       "AI音频工具": "audio",
       "AI娱乐工具": "entertainment",
+      "便民工具": "convenience",
       "其他AI工具": "other",
     }
     const categoryId = categoryIdMap[category]

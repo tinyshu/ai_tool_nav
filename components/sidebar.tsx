@@ -31,6 +31,7 @@ const categories = [
   { id: "AI设计工具", label: "AI设计工具", icon: Palette },
   { id: "AI音频工具", label: "AI音频工具", icon: Volume2 },
   { id: "AI娱乐工具", label: "AI娱乐工具", icon: Gamepad2 },
+  { id: "便民工具", label: "便民工具", icon: MoreHorizontal },
   { id: "其他AI工具", label: "其他AI工具", icon: MoreHorizontal },
 ]
 
