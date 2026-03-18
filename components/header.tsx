@@ -23,6 +23,7 @@ import {
 import { Button } from "@/components/ui/button"
 import { SearchPopover } from "@/components/search-popover"
 import { cn } from "@/lib/utils"
+import ThemeToggle from "@/components/theme-toggle"
 
 const categories = [
   { id: "office", label: "AI办公工具", icon: Briefcase },
@@ -120,6 +121,7 @@ export default function Header() {
             <span>Ctrl+D或⌘+D收藏本站</span>
             <span className="text-primary font-medium">「每周更新最新AI工具」</span>
           </div>
+          <ThemeToggle />
           <div className="relative" ref={searchAnchorRef}>
             <Button
               variant="ghost"
