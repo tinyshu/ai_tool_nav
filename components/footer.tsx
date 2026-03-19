@@ -61,6 +61,12 @@ export default function Footer() {
           </div>
         </div>
 
+        <div className="mt-8 flex justify-end">
+          <p className="text-muted-foreground text-xs">
+            Copyright © 2026 AI工具导航 鄂ICP备2026008808号
+          </p>
+        </div>
+
       </div>
     </footer>
   )
