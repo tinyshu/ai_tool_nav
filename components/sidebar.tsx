@@ -1,5 +1,6 @@
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
+import type { LucideIcon } from "lucide-react"
 import {
   Briefcase,
   Image,
@@ -19,7 +20,7 @@ import {
   ChevronDown,
 } from "lucide-react"
 
-const categories = [
+export const sidebarCategories = [
   { id: "AI办公工具", label: "AI办公工具", icon: Briefcase },
   { id: "AI图像工具", label: "AI图像工具", icon: Image },
   { id: "AI编程工具", label: "AI编程工具", icon: Code },
@@ -36,11 +37,19 @@ const categories = [
   { id: "其他AI工具", label: "其他AI工具", icon: MoreHorizontal },
 ]
 
+type SidebarCategory = {
+  id: string
+  label: string
+  icon: LucideIcon
+}
+
 interface SidebarProps {
   activeCategory: string
   onCategoryChange: (category: string) => void
   collapsed: boolean
   onToggleCollapse: () => void
+  mobileMode?: boolean
+  onSelect?: () => void
 }
 
 export default function Sidebar({
@@ -48,7 +57,53 @@ export default function Sidebar({
   onCategoryChange,
   collapsed,
   onToggleCollapse,
+  mobileMode = false,
+  onSelect,
 }: SidebarProps) {
+  const categoryListClasses = mobileMode ? "space-y-1 px-0" : "space-y-1 px-2"
+  const categoryItemClasses = mobileMode
+    ? "w-full flex items-center gap-3 px-3 py-3 rounded-lg text-sm transition-colors"
+    : "w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm transition-colors"
+
+  const renderCategories = (categories: SidebarCategory[]) => (
+    <ul className={categoryListClasses}>
+      {categories.map((category) => {
+        const Icon = category.icon
+        const isActive = activeCategory === category.id
+
+        return (
+          <li key={category.id}>
+            <button
+              onClick={() => {
+                onCategoryChange(category.id)
+                onSelect?.()
+              }}
+              className={cn(
+                categoryItemClasses,
+                isActive
+                  ? "bg-primary/10 text-primary font-medium"
+                  : "text-muted-foreground hover:bg-muted hover:text-foreground"
+              )}
+            >
+              <Icon className="h-5 w-5 shrink-0" />
+              {!collapsed && <span>{category.label}</span>}
+            </button>
+          </li>
+        )
+      })}
+    </ul>
+  )
+
+  if (mobileMode) {
+    return (
+      <div className="h-full">
+        <nav className="h-full overflow-y-auto py-2">
+          {renderCategories(sidebarCategories)}
+        </nav>
+      </div>
+    )
+  }
+
   return (
     <aside
       className={cn(
@@ -58,28 +113,7 @@ export default function Sidebar({
     >
       <div className="flex flex-col h-full">
         <nav className="flex-1 overflow-y-auto py-4">
-          <ul className="space-y-1 px-2">
-            {categories.map((category) => {
-              const Icon = category.icon
-              const isActive = activeCategory === category.id
-              return (
-                <li key={category.id}>
-                  <button
-                    onClick={() => onCategoryChange(category.id)}
-                    className={cn(
-                      "w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm transition-colors",
-                      isActive
-                        ? "bg-primary/10 text-primary font-medium"
-                        : "text-muted-foreground hover:bg-muted hover:text-foreground"
-                    )}
-                  >
-                    <Icon className="h-5 w-5 shrink-0" />
-                    {!collapsed && <span>{category.label}</span>}
-                  </button>
-                </li>
-              )
-            })}
-          </ul>
+          {renderCategories(sidebarCategories)}
         </nav>
         <div className="border-t p-2">
           <Button

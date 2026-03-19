@@ -30,11 +30,11 @@ export default function ToolCard({
 
   return (
     <Link href={url} target="_blank" rel="noopener noreferrer" className="block h-full">
-      <Card className="group relative overflow-hidden p-4 hover:shadow-lg transition-all duration-300 cursor-pointer border hover:border-primary/20 h-full">
+      <Card className="group relative overflow-hidden p-3 md:p-4 hover:shadow-lg transition-all duration-300 cursor-pointer border hover:border-primary/20 h-full">
         <div className="flex items-start gap-3">
           {/* Icon / Image */}
           {imageSrc ? (
-            <div className="shrink-0 w-12 h-12 rounded-xl overflow-hidden bg-muted flex items-center justify-center">
+            <div className="shrink-0 w-11 h-11 md:w-12 md:h-12 rounded-xl overflow-hidden bg-muted flex items-center justify-center">
               <Image
                 src={imageSrc}
                 alt={name}
@@ -46,7 +46,7 @@ export default function ToolCard({
           ) : (
             <div
               className={cn(
-                "shrink-0 w-12 h-12 rounded-xl flex items-center justify-center text-white font-bold text-sm",
+                "shrink-0 w-11 h-11 md:w-12 md:h-12 rounded-xl flex items-center justify-center text-white font-bold text-sm",
                 color
               )}
             >
@@ -57,9 +57,9 @@ export default function ToolCard({
           {/* Content */}
           <div className="flex-1 min-w-0">
             <div className="flex items-center gap-2">
-              <h3 className="font-medium text-foreground truncate">{name}</h3>
+              <h3 className="font-medium text-sm md:text-base text-foreground truncate">{name}</h3>
             </div>
-            <p className="mt-1 text-sm text-muted-foreground line-clamp-2">
+            <p className="mt-1 text-xs md:text-sm text-muted-foreground line-clamp-2">
               {description}
             </p>
           </div>

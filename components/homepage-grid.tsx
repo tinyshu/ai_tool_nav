@@ -15,7 +15,7 @@ const newTools = getAllTools()
 
 export default function HomepageGrid() {
   return (
-    <div className="space-y-10">
+    <div className="space-y-7 md:space-y-10">
       {/* 热门推荐 */}
       <FeaturedSection type="hot" tools={hotTools} />
 

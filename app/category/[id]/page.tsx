@@ -15,25 +15,25 @@ export default function CategoryPage({ params }: { params: Promise<{ id: string 
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      <main className="max-w-7xl mx-auto px-6 py-8">
+      <main className="max-w-7xl mx-auto px-3 py-5 sm:px-4 sm:py-6 md:px-6 md:py-8">
         {/* Back Button & Title */}
-        <div className="mb-8">
+        <div className="mb-5 md:mb-8">
           <Link
             href="/"
-            className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors mb-4"
+            className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-3 md:mb-4"
           >
             <ArrowLeft className="w-4 h-4" />
             返回首页
           </Link>
-          <div className="flex items-center gap-3">
-            <div className="w-1.5 h-8 bg-primary rounded-full" />
-            <h1 className="text-2xl font-bold text-foreground">{categoryName}</h1>
-            <span className="text-muted-foreground">({tools.length} 个工具)</span>
+          <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
+            <div className="w-1.5 h-7 md:h-8 bg-primary rounded-full" />
+            <h1 className="text-xl md:text-2xl font-bold text-foreground">{categoryName}</h1>
+            <span className="text-sm md:text-base text-muted-foreground">({tools.length} 个工具)</span>
           </div>
         </div>
 
         {/* Tools Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 md:gap-4">
           {tools.map((tool, index) => (
             <ToolCard
               key={index}

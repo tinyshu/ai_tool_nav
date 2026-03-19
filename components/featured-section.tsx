@@ -21,12 +21,12 @@ export default function FeaturedSection({ type, tools }: FeaturedSectionProps) {
   const isHot = type === "hot"
   
   return (
-    <section className="mb-10">
+    <section className="mb-7 md:mb-10">
       {/* Section Header Badge */}
-      <div className="mb-5">
+      <div className="mb-4 md:mb-5">
         <div
           className={cn(
-            "inline-flex items-center gap-2 px-4 py-2 rounded-full text-white text-sm font-medium",
+            "inline-flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-full text-white text-xs md:text-sm font-medium",
             isHot 
               ? "bg-gradient-to-r from-orange-500 to-red-500" 
               : "bg-gradient-to-r from-blue-500 to-cyan-500"
@@ -42,7 +42,7 @@ export default function FeaturedSection({ type, tools }: FeaturedSectionProps) {
       </div>
 
       {/* Tools Grid - 与分类区保持一致 */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 md:gap-4">
         {tools.slice(0, 12).map((tool, index) => (
           <ToolCard
             key={index}
