@@ -42,7 +42,7 @@ export default function FeaturedSection({ type, tools }: FeaturedSectionProps) {
       </div>
 
       {/* Tools Grid - 与分类区保持一致 */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 md:gap-4">
+      <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 md:gap-4">
         {tools.slice(0, 12).map((tool, index) => (
           <ToolCard
             key={index}
