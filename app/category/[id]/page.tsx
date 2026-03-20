@@ -3,7 +3,7 @@ import Link from "next/link"
 import { ArrowLeft } from "lucide-react"
 import Header from "@/components/header"
 import ToolCard from "@/components/tool-card"
-import { categoryMap, toolsData } from "@/lib/tools-data"
+import { categoryIntroMap, categoryMap, toolsData } from "@/lib/tools-data"
 
 export async function generateMetadata({
   params,
@@ -22,6 +22,7 @@ export async function generateMetadata({
 export default function CategoryPage({ params }: { params: { id: string } }) {
   const categoryName = categoryMap[params.id] || "未知分类"
   const tools = toolsData[categoryName] || []
+  const intro = categoryIntroMap[categoryName]
 
   return (
     <div className="min-h-screen bg-background">
@@ -42,6 +43,30 @@ export default function CategoryPage({ params }: { params: { id: string } }) {
             <span className="text-sm md:text-base text-muted-foreground">({tools.length} 个工具)</span>
           </div>
         </div>
+
+        {intro && (
+          <section
+            className="mb-6 md:mb-8 rounded-xl border border-border bg-muted/30 px-4 py-5 md:px-6 md:py-6"
+            aria-labelledby="category-intro-heading"
+          >
+            <h2
+              id="category-intro-heading"
+              className="text-base md:text-lg font-semibold text-foreground mb-3"
+            >
+              分类简介与选择建议
+            </h2>
+            <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
+              {intro.body}
+            </p>
+            {intro.tips && intro.tips.length > 0 && (
+              <ul className="mt-4 list-disc list-inside space-y-2 text-sm md:text-base text-muted-foreground leading-relaxed">
+                {intro.tips.map((tip, i) => (
+                  <li key={i}>{tip}</li>
+                ))}
+              </ul>
+            )}
+          </section>
+        )}
 
         {/* Tools Grid */}
         <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 md:gap-4">
