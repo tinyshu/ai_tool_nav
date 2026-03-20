@@ -1,9 +1,14 @@
-"use client"
-
+import type { Metadata } from "next"
 import Link from "next/link"
 import { ArrowLeft, ShieldCheck } from "lucide-react"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
+
+export const metadata: Metadata = {
+  title: "免责声明 - AI工具导航",
+  description:
+    "AI工具导航为用户提供站外链接便利，不对链接内容的准确性与完整性承担保证责任。以下为详细免责声明内容。",
+}
 
 export default function DisclaimerPage() {
   return (

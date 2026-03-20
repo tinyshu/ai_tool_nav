@@ -1,9 +1,14 @@
-"use client"
-
+import type { Metadata } from "next"
 import Link from "next/link"
 import { ArrowLeft } from "lucide-react"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
+
+export const metadata: Metadata = {
+  title: "关于我们 - AI工具导航",
+  description:
+    "AI工具导航致力于收录并持续更新全球AI工具与学习资源，帮助你快速发现前沿人工智能项目与实用工具。",
+}
 
 export default function AboutPage() {
   return (

@@ -1,11 +1,16 @@
-"use client"
-
+import type { Metadata } from "next"
 import Link from "next/link"
 import { ArrowLeft } from "lucide-react"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
 
 const CONTACT_EMAIL = "2690540630@qq.com"
+
+export const metadata: Metadata = {
+  title: "联系我们 - AI工具导航",
+  description:
+    "欢迎联系站长提交AI工具、提出建议或商务合作。通过邮箱快速与我们沟通交流。",
+}
 
 export default function ContactPage() {
   return (

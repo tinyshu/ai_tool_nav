@@ -1,15 +1,26 @@
-"use client"
-
-import { use } from "react"
+import type { Metadata } from "next"
 import Link from "next/link"
 import { ArrowLeft } from "lucide-react"
 import Header from "@/components/header"
 import ToolCard from "@/components/tool-card"
 import { categoryMap, toolsData } from "@/lib/tools-data"
 
-export default function CategoryPage({ params }: { params: Promise<{ id: string }> }) {
-  const { id } = use(params)
-  const categoryName = categoryMap[id] || "未知分类"
+export async function generateMetadata({
+  params,
+}: {
+  params: { id: string }
+}): Promise<Metadata> {
+  const categoryName = categoryMap[params.id] || "未知分类"
+  const tools = toolsData[categoryName] || []
+
+  return {
+    title: `${categoryName}AI工具推荐_最新${categoryName}工具导航`,
+    description: `浏览${categoryName}分类下的AI工具推荐，当前共收录${tools.length}个工具，并持续更新热门与最新收录。`,
+  }
+}
+
+export default function CategoryPage({ params }: { params: { id: string } }) {
+  const categoryName = categoryMap[params.id] || "未知分类"
   const tools = toolsData[categoryName] || []
 
   return (
