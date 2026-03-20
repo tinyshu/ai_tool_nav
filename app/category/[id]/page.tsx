@@ -8,9 +8,10 @@ import { categoryIntroMap, categoryMap, toolsData } from "@/lib/tools-data"
 export async function generateMetadata({
   params,
 }: {
-  params: { id: string }
+  params: Promise<{ id: string }>
 }): Promise<Metadata> {
-  const categoryName = categoryMap[params.id] || "未知分类"
+  const { id } = await params
+  const categoryName = categoryMap[id] || "未知分类"
   const tools = toolsData[categoryName] || []
 
   return {
@@ -19,8 +20,13 @@ export async function generateMetadata({
   }
 }
 
-export default function CategoryPage({ params }: { params: { id: string } }) {
-  const categoryName = categoryMap[params.id] || "未知分类"
+export default async function CategoryPage({
+  params,
+}: {
+  params: Promise<{ id: string }>
+}) {
+  const { id } = await params
+  const categoryName = categoryMap[id] || "未知分类"
   const tools = toolsData[categoryName] || []
   const intro = categoryIntroMap[categoryName]
 
