@@ -322,7 +322,7 @@ export const toolsData: Record<string, ToolItem[]> = {
     { name: "Arc AI", description: "腾出ARC免费AI图片工具", icon: "A", color: "bg-gradient-to-br from-blue-400 to-purple-500", url: "https://arc.tencent.com" ,image:"arc.png"},
   ],
   便民工具: [
-    { name: "证件照在线制作", description: "在线制作证件照", icon: "证", color: "bg-gradient-to-br from-blue-500 to-cyan-500", url: "https://www.baidu.com/s?wd=证件照在线制作",image:"zhenjianzhao.png"},
+    { name: "证件照在线制作", description: "在线制作证件照", icon: "证", color: "bg-gradient-to-br from-blue-500 to-cyan-500", url: "https://www.zheyings.cn",image:"zhenjianzhao.png"},
     { name: "支付宝音效", description: "一键生成支付宝导致音效", icon: "赞", color: "bg-gradient-to-br from-pink-500 to-rose-500", url: "https://toolwa.com/receipt" ,image:"zhifubaoyx.png"},
     { name: "可赞AI", description: "文字一键可视化生成海报/配图", icon: "赞", color: "bg-gradient-to-br from-pink-500 to-rose-500", url: "https://kezign.cn" ,image:"kezhanai.png"},
     { name: "全景故宫", description: "在线浏览故宫全景与展馆导览", icon: "宫", color: "bg-gradient-to-br from-amber-500 to-orange-500", url: "https://pano.dpm.org.cn" ,image:"gongjing.png"},
