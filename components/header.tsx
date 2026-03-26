@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from "react"
 import Link from "next/link"
+import NextImage from "next/image"
 import {
   Search,
   ChevronDown,
@@ -64,8 +65,15 @@ export default function Header() {
       <div className="flex h-16 items-center justify-between px-4">
         {/* Logo - 点击返回首页 */}
         <Link href="/" className="flex items-center gap-2 hover:opacity-90 transition-opacity">
-          <span className="text-xl font-bold">
-            <span className="text-primary">AI</span>
+          <span className="text-xl font-bold inline-flex items-center gap-2">
+            <NextImage
+              src="/ai_dh.png"
+              alt="工具导航"
+              width={28}
+              height={28}
+              className="h-7 w-7"
+              priority
+            />
             <span className="text-foreground">工具导航</span>
           </span>
         </Link>

@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { Mail } from "lucide-react"
+import Image from "next/image"
 
 export default function Footer() {
   return (
@@ -10,8 +11,15 @@ export default function Footer() {
           <div className="max-w-xl">
             {/* Logo - 点击返回首页 */}
             <Link href="/" className="inline-flex items-center gap-2 mb-4 hover:opacity-90 transition-opacity">
-              <span className="text-xl font-bold">
-                <span className="text-primary">AI</span>
+              <span className="text-xl font-bold inline-flex items-center gap-2">
+                <Image
+                  src="/ai_dh.png"
+                  alt="工具导航"
+                  width={28}
+                  height={28}
+                  className="h-7 w-7"
+                  priority
+                />
                 <span className="text-foreground">工具导航</span>
               </span>
             </Link>
@@ -29,7 +37,7 @@ export default function Footer() {
                 href="/" 
                 className="text-foreground hover:text-primary transition-colors text-sm"
               >
-                AI工具导航
+                工具导航
               </Link>
               <Link 
                 href="/about" 
