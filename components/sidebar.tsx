@@ -21,6 +21,7 @@ import {
 } from "lucide-react"
 
 export const sidebarCategories = [
+  { id: "便民工具", label: "便民工具", icon: Wrench },
   { id: "AI办公工具", label: "AI办公工具", icon: Briefcase },
   { id: "AI图像工具", label: "AI图像工具", icon: Image },
   { id: "AI编程工具", label: "AI编程工具", icon: Code },
@@ -33,7 +34,6 @@ export const sidebarCategories = [
   { id: "AI设计工具", label: "AI设计工具", icon: Palette },
   { id: "AI音频工具", label: "AI音频工具", icon: Volume2 },
   { id: "AI娱乐工具", label: "AI娱乐工具", icon: Gamepad2 },
-  { id: "便民工具", label: "便民工具", icon: Wrench },
   { id: "其他AI工具", label: "其他AI工具", icon: MoreHorizontal },
 ]
 

@@ -35,13 +35,15 @@ export const subCategories: Record<string, string[]> = {
 }
 
 export const categoryOrder = [
+  "便民工具",
   "AI办公工具", "AI图像工具", "AI编程工具", "AI写作工具", "AI对话工具",
   "AI开发平台", "AI搜索引擎", "AI翻译工具", "AI视频工具", "AI设计工具",
-  "AI音频工具", "AI娱乐工具", "便民工具",
+  "AI音频工具", "AI娱乐工具",
   "其他AI工具",
 ] as const
 
 export const categories = [
+  { id: "convenience", name: "便民工具" },
   { id: "office", name: "AI办公工具" },
   { id: "image", name: "AI图像工具" },
   { id: "coding", name: "AI编程工具" },
@@ -54,7 +56,6 @@ export const categories = [
   { id: "design", name: "AI设计工具" },
   { id: "audio", name: "AI音频工具" },
   { id: "entertainment", name: "AI娱乐工具" },
-  { id: "convenience", name: "便民工具" },
   { id: "other", name: "其他AI工具" },
 ] as const
 
@@ -323,6 +324,7 @@ export const toolsData: Record<string, ToolItem[]> = {
   ],
   便民工具: [
     { name: "证件照在线制作", description: "在线制作证件照", icon: "证", color: "bg-gradient-to-br from-blue-500 to-cyan-500", url: "https://www.zheyings.cn",image:"zhenjianzhao.png"},
+    { name: "秒码", description: "在线创意二维码制作", icon: "秒", color: "bg-gradient-to-br from-blue-500 to-cyan-500", url: "https://qrcode.fit/",featured: true ,image:"miaoma.jpg"},
     { name: "支付宝音效", description: "一键生成支付宝导致音效", icon: "赞", color: "bg-gradient-to-br from-pink-500 to-rose-500", url: "https://toolwa.com/receipt" ,image:"zhifubaoyx.png"},
     { name: "可赞AI", description: "文字一键可视化生成海报/配图", icon: "赞", color: "bg-gradient-to-br from-pink-500 to-rose-500", url: "https://kezign.cn" ,image:"kezhanai.png"},
     { name: "全景故宫", description: "在线浏览故宫全景与展馆导览", icon: "宫", color: "bg-gradient-to-br from-amber-500 to-orange-500", url: "https://pano.dpm.org.cn" ,image:"gongjing.png"},
