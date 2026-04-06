@@ -15,6 +15,7 @@ import {
   Volume2,
   Gamepad2,
   Wrench,
+  Sparkles,
   MoreHorizontal,
   ChevronUp,
   ChevronDown,
@@ -22,6 +23,7 @@ import {
 
 export const sidebarCategories = [
   { id: "便民工具", label: "便民工具", icon: Wrench },
+  { id: "神奇网站", label: "神奇网站", icon: Sparkles },
   { id: "AI办公工具", label: "AI办公工具", icon: Briefcase },
   { id: "AI图像工具", label: "AI图像工具", icon: Image },
   { id: "AI编程工具", label: "AI编程工具", icon: Code },

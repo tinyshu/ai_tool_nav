@@ -36,6 +36,7 @@ export default function HomeClient() {
       "AI音频工具": "audio",
       "AI娱乐工具": "entertainment",
       "便民工具": "convenience",
+      "神奇网站": "magic",
       "其他AI工具": "other",
     }
     const categoryId = categoryIdMap[category]

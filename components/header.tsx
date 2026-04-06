@@ -19,6 +19,7 @@ import {
   Volume2,
   Gamepad2,
   Wrench,
+  Sparkles,
   MoreHorizontal,
   User,
 } from "lucide-react"
@@ -29,6 +30,7 @@ import ThemeToggle from "@/components/theme-toggle"
 
 const categories = [
   { id: "convenience", label: "便民工具", icon: Wrench },
+  { id: "magic", label: "神奇网站", icon: Sparkles },
   { id: "office", label: "AI办公工具", icon: Briefcase },
   { id: "image", label: "AI图像工具", icon: Image },
   { id: "coding", label: "AI编程工具", icon: Code },

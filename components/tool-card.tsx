@@ -29,8 +29,8 @@ export default function ToolCard({
   const imageSrc = image ? `${TOOLS_IMAGE_BASE}/${image}` : null
 
   return (
-    <Link href={url} target="_blank" rel="noopener" className="block h-full">
-      <Card className="group relative overflow-hidden p-3 md:p-4 hover:shadow-lg transition-all duration-300 cursor-pointer border hover:border-primary/20 h-full">
+    <Link href={url} target="_blank" rel="noopener" className="block w-full self-start">
+      <Card className="group relative overflow-hidden p-3 md:p-3.5 hover:shadow-lg transition-all duration-300 cursor-pointer border hover:border-primary/20">
         <div className="flex items-start gap-3">
           {/* Icon / Image */}
           {imageSrc ? (
@@ -59,7 +59,7 @@ export default function ToolCard({
             <div className="flex items-center gap-2">
               <h3 className="font-medium text-sm md:text-base text-foreground truncate">{name}</h3>
             </div>
-            <p className="mt-1 text-xs md:text-sm text-muted-foreground line-clamp-2">
+            <p className="mt-0.5 text-xs md:text-sm leading-snug text-muted-foreground line-clamp-2">
               {description}
             </p>
           </div>

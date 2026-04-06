@@ -63,6 +63,11 @@
   </url>
 
   <url>
+    <loc>https://aidh.site/category/magic</loc>
+    <priority>0.74</priority>
+  </url>
+
+  <url>
     <loc>https://aidh.site/category/translate</loc>
     <priority>0.73</priority>
   </url>

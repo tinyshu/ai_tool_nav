@@ -32,10 +32,12 @@ export const subCategories: Record<string, string[]> = {
   AI娱乐工具: ["常用AI娱乐工具", "AI游戏", "AI创意"],
   其他AI工具: ["常用其他工具", "AI学习", "AI生活"],
   便民工具: ["常用便民工具"],
+  神奇网站: [],
 }
 
 export const categoryOrder = [
   "便民工具",
+  "神奇网站",
   "AI办公工具", "AI图像工具", "AI编程工具", "AI写作工具", "AI对话工具",
   "AI开发平台", "AI搜索引擎", "AI翻译工具", "AI视频工具", "AI设计工具",
   "AI音频工具", "AI娱乐工具",
@@ -44,6 +46,7 @@ export const categoryOrder = [
 
 export const categories = [
   { id: "convenience", name: "便民工具" },
+  { id: "magic", name: "神奇网站" },
   { id: "office", name: "AI办公工具" },
   { id: "image", name: "AI图像工具" },
   { id: "coding", name: "AI编程工具" },
@@ -193,6 +196,15 @@ export const categoryIntroMap: Record<string, CategoryIntro> = {
       "选择技巧：是否需注册、广告密度、移动端适配与加载速度。",
     ],
   },
+  神奇网站: {
+    body:
+      "神奇网站收录那些让人眼前一亮、玩法独特或能力出人意料的站点：可能是极致效率的小工具、惊艳的可视化、冷门但好用的服务，或把复杂事变简单的在线应用。本分类侧重「有趣 + 有用」，适合喜欢探索、愿意尝鲜的你。我们会持续补充新发现；当前若列表为空，表示正在整理首批收录，欢迎通过本站联系方式推荐你认为「神奇」的网站。",
+    tips: [
+      "适合：喜欢挖宝、追求新鲜感与效率工具爱好者。",
+      "入门建议：先收藏本页，后续有更新时再来逛一圈。",
+      "选择技巧：注意隐私与数据上传范围，优先 HTTPS 与口碑清晰的站点。",
+    ],
+  },
   其他AI工具: {
     body:
       "其他AI工具收录学习、生活自动化与难以归入单一垂类的创新应用，适合希望拓宽AI使用边界的探索者。该分类跨度大，建议结合个人目标（学习路径、效率插件、生活助手）逐一试用。我们会随行业变化补充新站点，避免你错过小而美的工具。若你有优质站点推荐，也可通过本站联系渠道反馈。",
@@ -205,6 +217,48 @@ export const categoryIntroMap: Record<string, CategoryIntro> = {
 }
 
 export const toolsData: Record<string, ToolItem[]> = {
+  神奇网站: [
+    {
+      name: "AI图片无痕改字",
+      description: "OpenCut在线智能改字自然融合",
+      icon: "改",
+      color: "bg-gradient-to-br from-violet-500 to-fuchsia-600",
+      url: "https://opencut.net/image/change/text",
+      featured: true, 
+      image: "opencut.png"
+    },
+
+    {
+      name: "时光邮局",
+      description: "写给未来的自己",
+      icon: "时",
+      color: "bg-gradient-to-br from-violet-500 to-fuchsia-600",
+      url: "https://www.hi2future.com/",
+      featured: true, 
+      image: "shiguangyouju.png"
+    },
+
+    {
+      name: "免费在线物理，化学仿真学习",
+      description: "免费互动科学与数学仿真平台",
+      icon: "仿",
+      color: "bg-gradient-to-br from-violet-500 to-fuchsia-600",
+      url: "https://phet.colorado.edu/zh_CN/",
+      featured: true, 
+      image: "phet.png"
+    },
+    
+    {
+      name: "手机博物馆",
+      description: "2800款手机，虚位以待您的捐赠",
+      icon: "仿",
+      color: "bg-gradient-to-br from-violet-500 to-fuchsia-600",
+      url: "https://www.mobilephonemuseum.com/",
+      featured: true, 
+      image: "bowuguan.png"
+    },
+
+  ],
   AI办公工具: [
     { name: "OpenClaw", description: "开源的、AI Agent自动化框架", icon: "O", color: "bg-gradient-to-br from-pink-500 to-red-500", url: "https://openclaw.ai", featured: true, image: "openclaw.png" ,addedAt:1773724360},
     { name: "AiPPT", description: "创新的全智能AI PPT生成平台", icon: "PPT", color: "bg-gradient-to-br from-pink-500 to-red-500", url: "https://www.aippt.cn", featured: true, image: "pptai.png" ,addedAt:1773724361},
