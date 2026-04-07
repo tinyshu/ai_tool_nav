@@ -258,6 +258,26 @@ export const toolsData: Record<string, ToolItem[]> = {
       image: "bowuguan.png"
     },
 
+    { 
+      name: "秒码", 
+      description: "在线创意二维码制作", 
+      icon: "秒", 
+      color: "bg-gradient-to-br from-blue-500 to-cyan-500", 
+      url: "https://qrcode.fit",
+      featured: true ,
+      image:"miaoma.png"
+    },
+
+     { 
+      name: "Latoo games", 
+      description: "在线游戏平台，提供各种免费游戏", 
+      icon: "G", 
+      color: "bg-gradient-to-br from-blue-500 to-cyan-500", 
+      url: "https://www.latoo.com",
+      featured: true ,
+      image:"lotoogame.png"
+    },
+
   ],
   AI办公工具: [
     { name: "OpenClaw", description: "开源的、AI Agent自动化框架", icon: "O", color: "bg-gradient-to-br from-pink-500 to-red-500", url: "https://openclaw.ai", featured: true, image: "openclaw.png" ,addedAt:1773724360},
@@ -378,7 +398,7 @@ export const toolsData: Record<string, ToolItem[]> = {
   ],
   便民工具: [
     { name: "证件照在线制作", description: "在线制作证件照", icon: "证", color: "bg-gradient-to-br from-blue-500 to-cyan-500", url: "https://www.zheyings.cn",image:"zhenjianzhao.png"},
-    { name: "秒码", description: "在线创意二维码制作", icon: "秒", color: "bg-gradient-to-br from-blue-500 to-cyan-500", url: "https://qrcode.fit/",featured: true ,image:"miaoma.jpg"},
+   
     { name: "支付宝音效", description: "一键生成支付宝导致音效", icon: "赞", color: "bg-gradient-to-br from-pink-500 to-rose-500", url: "https://toolwa.com/receipt" ,image:"zhifubaoyx.png"},
     { name: "可赞AI", description: "文字一键可视化生成海报/配图", icon: "赞", color: "bg-gradient-to-br from-pink-500 to-rose-500", url: "https://kezign.cn" ,image:"kezhanai.png"},
     { name: "全景故宫", description: "在线浏览故宫全景与展馆导览", icon: "宫", color: "bg-gradient-to-br from-amber-500 to-orange-500", url: "https://pano.dpm.org.cn" ,image:"gongjing.png"},
