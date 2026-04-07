@@ -1,5 +1,6 @@
 import CategorySection from "@/components/category-section"
 import FeaturedSection from "@/components/featured-section"
+import BaiduSearchBar from "@/components/baidu-search-bar"
 import { toolsData, categories, getAllTools } from "@/lib/tools-data"
 
 // 从全站工具数据中筛选热门推荐（featured: true）
@@ -16,6 +17,7 @@ const newTools = getAllTools()
 export default function HomepageGrid() {
   return (
     <div className="space-y-7 md:space-y-10">
+      <BaiduSearchBar />
       {/* 热门推荐 */}
       <FeaturedSection type="hot" tools={hotTools} />
 
