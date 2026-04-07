@@ -269,8 +269,8 @@ export const toolsData: Record<string, ToolItem[]> = {
     },
 
      { 
-      name: "Latoo games", 
-      description: "在线游戏平台，提供各种免费游戏", 
+      name: "carLatoo games", 
+      description: "卡通在线游戏平台，各种免费游戏", 
       icon: "G", 
       color: "bg-gradient-to-br from-blue-500 to-cyan-500", 
       url: "https://cartoongames.io/",
