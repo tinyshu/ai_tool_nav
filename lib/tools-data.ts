@@ -273,7 +273,7 @@ export const toolsData: Record<string, ToolItem[]> = {
       description: "在线游戏平台，提供各种免费游戏", 
       icon: "G", 
       color: "bg-gradient-to-br from-blue-500 to-cyan-500", 
-      url: "https://www.latoo.com",
+      url: "https://cartoongames.io/",
       featured: true ,
       image:"lotoogame.png"
     },
