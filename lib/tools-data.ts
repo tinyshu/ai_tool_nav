@@ -278,6 +278,16 @@ export const toolsData: Record<string, ToolItem[]> = {
       image:"lotoogame.png"
     },
 
+    { 
+      name: "米壳AI", 
+      description: "AI视频去水印网站", 
+      icon: "M", 
+      color: "bg-gradient-to-br from-blue-500 to-cyan-500", 
+      url: "https://www.medio.cool/video_strip.html",
+      featured: true ,
+      image:"mixiaiai.png"
+    },
+
   ],
   AI办公工具: [
     { name: "OpenClaw", description: "开源的、AI Agent自动化框架", icon: "O", color: "bg-gradient-to-br from-pink-500 to-red-500", url: "https://openclaw.ai", featured: true, image: "openclaw.png" ,addedAt:1773724360},

@@ -69,7 +69,11 @@ export function SearchPopover({ open, onClose, anchorRef }: SearchPopoverProps) 
   }, [open, onClose, anchorRef])
 
   const handleSelect = (tool: ToolWithCategory) => {
-    window.open(tool.url, "_blank", "noopener")
+    window.open(
+      `/go?url=${encodeURIComponent(tool.url)}`,
+      "_blank",
+      "noopener,noreferrer"
+    )
     onClose()
   }
 

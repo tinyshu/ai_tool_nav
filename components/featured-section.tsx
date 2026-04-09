@@ -1,20 +1,11 @@
 import { Flame, Clock } from "lucide-react"
 import { cn } from "@/lib/utils"
 import ToolCard from "@/components/tool-card"
-
-interface Tool {
-  name: string
-  description: string
-  icon: string
-  color: string
-  url: string
-  featured?: boolean
-  image?: string
-}
+import type { ToolWithCategory } from "@/lib/tools-data"
 
 interface FeaturedSectionProps {
   type: "hot" | "new"
-  tools: Tool[]
+  tools: ToolWithCategory[]
 }
 
 export default function FeaturedSection({ type, tools }: FeaturedSectionProps) {
@@ -51,7 +42,6 @@ export default function FeaturedSection({ type, tools }: FeaturedSectionProps) {
             icon={tool.icon}
             color={tool.color}
             url={tool.url}
-            featured={tool.featured}
             image={tool.image}
           />
         ))}

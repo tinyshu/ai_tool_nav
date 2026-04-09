@@ -1,8 +1,6 @@
-import Link from "next/link"
 import Image from "next/image"
 import { cn } from "@/lib/utils"
 import { Card } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
 
 interface ToolCardProps {
   name: string
@@ -10,7 +8,6 @@ interface ToolCardProps {
   icon: string
   color: string
   url: string
-  featured?: boolean
   /** 可选：真图片文件名（位于 public/tools/ 下，如 "lingdong.png"） */
   image?: string
 }
@@ -23,13 +20,19 @@ export default function ToolCard({
   icon,
   color,
   url,
-  featured,
   image,
 }: ToolCardProps) {
   const imageSrc = image ? `${TOOLS_IMAGE_BASE}/${image}` : null
+  const href = `/go?url=${encodeURIComponent(url)}`
 
   return (
-    <Link href={url} target="_blank" rel="noopener" className="block w-full self-start">
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      title={url}
+      className="block w-full self-start"
+    >
       <Card className="group relative overflow-hidden p-3 md:p-3.5 hover:shadow-lg transition-all duration-300 cursor-pointer border hover:border-primary/20">
         <div className="flex items-start gap-3">
           {/* Icon / Image */}
@@ -68,6 +71,6 @@ export default function ToolCard({
         {/* Hover overlay */}
         <div className="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
       </Card>
-    </Link>
+    </a>
   )
 }

@@ -84,7 +84,6 @@ export default async function CategoryPage({
               icon={tool.icon}
               color={tool.color}
               url={tool.url}
-              featured={tool.featured}
               image={tool.image}
             />
           ))}
