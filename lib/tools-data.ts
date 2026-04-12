@@ -413,7 +413,7 @@ export const toolsData: Record<string, ToolItem[]> = {
     { name: "可赞AI", description: "文字一键可视化生成海报/配图", icon: "赞", color: "bg-gradient-to-br from-pink-500 to-rose-500", url: "https://kezign.cn" ,image:"kezhanai.png"},
     { name: "全景故宫", description: "在线浏览故宫全景与展馆导览", icon: "宫", color: "bg-gradient-to-br from-amber-500 to-orange-500", url: "https://pano.dpm.org.cn" ,image:"gongjing.png"},
     { name: "迷宫生成器", description: "随机生成迷宫可用于游戏", icon: "迷", color: "bg-gradient-to-br from-purple-500 to-indigo-600", url: "https://toolwa.com/maze",image:"mijun.png" },
-    { name: "丑萌头像生成器", description: "生成趣味头像，简单有趣", icon: "丑", color: "bg-gradient-to-br from-emerald-500 to-teal-600", url: "https://toolwa.com/ugly-avatar",image:"choumeng.png" },
+    { name: "呆萌头像生成器", description: "生成趣味头像，简单有趣", icon: "丑", color: "bg-gradient-to-br from-emerald-500 to-teal-600", url: "/playground/avatar", image: "daimeng.png" },
     { name: "让我帮你百度一下", description: "生成“让我帮你百度一下”链接", icon: "度", color: "bg-gradient-to-br from-blue-600 to-blue-700", url: "https://btfy.ur1.fun",image:"wobang.png" },
 
     { name: "英文大小写转换", description: "英文大小写快速转换", icon: "Aa", color: "bg-gradient-to-br from-slate-600 to-slate-800", url: "https://toolwa.com/case-convert",image:"yingwen.png" },

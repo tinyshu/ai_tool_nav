@@ -2,8 +2,10 @@
 
 import { useState, useEffect, useRef, useCallback } from "react"
 import Link from "next/link"
+import { useRouter } from "next/navigation"
 import { Search, ExternalLink } from "lucide-react"
 import { searchTools, categoryNameToId, type ToolWithCategory } from "@/lib/tools-data"
+import { isInternalToolUrl } from "@/lib/outbound-redirect"
 import { Input } from "@/components/ui/input"
 import { cn } from "@/lib/utils"
 
@@ -17,6 +19,7 @@ interface SearchPopoverProps {
 }
 
 export function SearchPopover({ open, onClose, anchorRef }: SearchPopoverProps) {
+  const router = useRouter()
   const [query, setQuery] = useState("")
   const [results, setResults] = useState<ToolWithCategory[]>([])
   const [debouncedQuery, setDebouncedQuery] = useState("")
@@ -69,11 +72,15 @@ export function SearchPopover({ open, onClose, anchorRef }: SearchPopoverProps) 
   }, [open, onClose, anchorRef])
 
   const handleSelect = (tool: ToolWithCategory) => {
-    window.open(
-      `/go?url=${encodeURIComponent(tool.url)}`,
-      "_blank",
-      "noopener,noreferrer"
-    )
+    if (isInternalToolUrl(tool.url)) {
+      router.push(tool.url)
+    } else {
+      window.open(
+        `/go?url=${encodeURIComponent(tool.url)}`,
+        "_blank",
+        "noopener,noreferrer"
+      )
+    }
     onClose()
   }
 
@@ -140,7 +147,9 @@ export function SearchPopover({ open, onClose, anchorRef }: SearchPopoverProps) 
                       {tool.description}
                     </p>
                   </div>
-                  <ExternalLink className="h-4 w-4 text-muted-foreground shrink-0 mt-1" />
+                  {!isInternalToolUrl(tool.url) && (
+                    <ExternalLink className="h-4 w-4 text-muted-foreground shrink-0 mt-1" />
+                  )}
                 </button>
                 {categoryNameToId[tool.category] ? (
                   <Link

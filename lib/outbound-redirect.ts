@@ -1,8 +1,15 @@
 import { getAllTools } from "@/lib/tools-data"
 
+/** 站内工具链接：以 / 开头且非 // 协议相对，不经过 /go 出站校验 */
+export function isInternalToolUrl(url: string): boolean {
+  return url.startsWith("/") && !url.startsWith("//")
+}
+
 /** 本站 tools-data 中登记过的出站地址（精确匹配，防开放重定向） */
 const allowedOutboundUrls = new Set<string>(
-  getAllTools().map((t) => t.url)
+  getAllTools()
+    .map((t) => t.url)
+    .filter((u) => /^https?:\/\//i.test(u))
 )
 
 /**

@@ -1,6 +1,8 @@
 import Image from "next/image"
+import Link from "next/link"
 import { cn } from "@/lib/utils"
 import { Card } from "@/components/ui/card"
+import { isInternalToolUrl } from "@/lib/outbound-redirect"
 
 interface ToolCardProps {
   name: string
@@ -23,16 +25,12 @@ export default function ToolCard({
   image,
 }: ToolCardProps) {
   const imageSrc = image ? `${TOOLS_IMAGE_BASE}/${image}` : null
-  const href = `/go?url=${encodeURIComponent(url)}`
+  const internal = isInternalToolUrl(url)
+  const href = internal ? url : `/go?url=${encodeURIComponent(url)}`
 
-  return (
-    <a
-      href={href}
-      target="_blank"
-      rel="noopener noreferrer"
-      title={url}
-      className="block w-full self-start"
-    >
+  const className = "block w-full self-start"
+
+  const inner = (
       <Card className="group relative overflow-hidden p-3 md:p-3.5 hover:shadow-lg transition-all duration-300 cursor-pointer border hover:border-primary/20">
         <div className="flex items-start gap-3">
           {/* Icon / Image */}
@@ -71,6 +69,25 @@ export default function ToolCard({
         {/* Hover overlay */}
         <div className="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
       </Card>
+  )
+
+  if (internal) {
+    return (
+      <Link href={href} className={className} title={url}>
+        {inner}
+      </Link>
+    )
+  }
+
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      title={url}
+      className={className}
+    >
+      {inner}
     </a>
   )
 }
