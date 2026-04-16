@@ -17,6 +17,17 @@ const newTools = getAllTools()
 export default function HomepageGrid() {
   return (
     <div className="space-y-7 md:space-y-10">
+      <header className="space-y-3">
+        <h1 className="text-xl md:text-2xl font-bold text-foreground tracking-tight">
+          工具导航｜免费AI工具大全与分类推荐
+        </h1>
+        <h2 className="text-sm md:text-base font-semibold text-foreground max-w-3xl leading-snug">
+          在线工具导航 · 收录含 OpenAI 在内的对话、办公、图像、编程等 AI 应用
+        </h2>
+        <p className="text-sm text-muted-foreground leading-relaxed max-w-3xl">
+          本站工具导航持续整理各分类下的免费在线工具清单，支持按热门与最新浏览检索，帮助你快速发现适合的 AI 工具与常用站点。
+        </p>
+      </header>
       <BaiduSearchBar />
       {/* 热门推荐 */}
       <FeaturedSection type="hot" tools={hotTools} />

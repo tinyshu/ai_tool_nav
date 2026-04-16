@@ -1,10 +1,10 @@
 "use client"
 
+import type { ReactNode } from "react"
 import { useState } from "react"
 import { Menu } from "lucide-react"
 import Header from "@/components/header"
 import Sidebar from "@/components/sidebar"
-import HomepageGrid from "@/components/homepage-grid"
 import Footer from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import {
@@ -15,7 +15,7 @@ import {
   SheetTitle,
 } from "@/components/ui/sheet"
 
-export default function HomeClient() {
+export default function HomeClient({ children }: { children: ReactNode }) {
   const [activeCategory, setActiveCategory] = useState("AI办公工具")
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false)
   const [mobileCategoryOpen, setMobileCategoryOpen] = useState(false)
@@ -71,7 +71,7 @@ export default function HomeClient() {
               分类导航
             </Button>
           </div>
-          <HomepageGrid />
+          {children}
           <Footer />
         </main>
       </div>

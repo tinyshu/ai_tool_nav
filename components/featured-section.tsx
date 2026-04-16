@@ -15,21 +15,21 @@ export default function FeaturedSection({ type, tools }: FeaturedSectionProps) {
     <section className="mb-7 md:mb-10">
       {/* Section Header Badge */}
       <div className="mb-4 md:mb-5">
-        <div
+        <h2
           className={cn(
             "inline-flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-full text-white text-xs md:text-sm font-medium",
-            isHot 
-              ? "bg-gradient-to-r from-orange-500 to-red-500" 
+            isHot
+              ? "bg-gradient-to-r from-orange-500 to-red-500"
               : "bg-gradient-to-r from-blue-500 to-cyan-500"
           )}
         >
           {isHot ? (
-            <Flame className="h-4 w-4" />
+            <Flame className="h-4 w-4 shrink-0" aria-hidden />
           ) : (
-            <Clock className="h-4 w-4" />
+            <Clock className="h-4 w-4 shrink-0" aria-hidden />
           )}
           <span>{isHot ? "热门推荐" : "最新收录"}</span>
-        </div>
+        </h2>
       </div>
 
       {/* Tools Grid - 与分类区保持一致 */}

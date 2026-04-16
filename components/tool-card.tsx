@@ -58,7 +58,7 @@ export default function ToolCard({
           {/* Content */}
           <div className="flex-1 min-w-0">
             <div className="flex items-center gap-2">
-              <h3 className="font-medium text-sm md:text-base text-foreground truncate">{name}</h3>
+              <p className="font-medium text-sm md:text-base text-foreground truncate">{name}</p>
             </div>
             <p className="mt-0.5 text-xs md:text-sm leading-snug text-muted-foreground line-clamp-2">
               {description}

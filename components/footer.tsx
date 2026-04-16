@@ -58,6 +58,22 @@ export default function Footer() {
                 联系我们
               </Link>
             </nav>
+
+            <a
+              href="https://frogdr.com/aidh.site?utm_source=aidh.site"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Monitor your Domain Rating with FrogDR"
+              className="inline-flex"
+            >
+              <img
+                src="https://frogdr.com/aidh.site/badge-white.svg"
+                alt="Monitor your Domain Rating with FrogDR"
+                width="250"
+                height="54"
+                loading="lazy"
+              />
+            </a>
             
             {/* Email icon */}
             <Link 
