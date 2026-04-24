@@ -312,6 +312,16 @@ export const toolsData: Record<string, ToolItem[]> = {
     { name: "WPS AI", description: "WPS推出的AI智能办公助手", icon: "W", color: "bg-gradient-to-br from-red-500 to-rose-600", url: "https://ai.wps.cn",featured: true,image:"wpsai.png" ,addedAt:1773724366},
   ],
   AI图像工具: [
+    {
+      name: "蕉点AII",
+      description: "蕉电商全品类出图专家",
+      icon: "蕉",
+      color: "bg-gradient-to-br from-cyan-500 to-teal-600",
+      url: "http://www.jiaodianai.com/invite?inviteCode=0H23g1Gw",
+      featured: true,
+      image: "jiaodian_ai.jpg",
+      addedAt: 1773724390,
+    },
     { name: "MoPNG设计助手", description: "MoPNG设计助手，AI图片编...", icon: "Mo", color: "bg-gradient-to-br from-purple-500 to-pink-500", url: "https://mopng.cn/tools", featured: true ,image:"mopng.png"},
     { name: "妙图设计", description: "妙图设计（MagiqSight）是...", icon: "妙", color: "bg-gradient-to-br from-gray-600 to-gray-700", url: "https://magiqsight.com" },
     { name: "潮际好麦", description: "潮际好麦是一款专为电商平...", icon: "潮", color: "bg-gradient-to-br from-red-500 to-orange-500", url: "https://marketing.k-fashionshop.com/" ,image:"chaojimai.png",addedAt:1773724369},
