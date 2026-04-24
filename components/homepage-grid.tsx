@@ -3,10 +3,15 @@ import FeaturedSection from "@/components/featured-section"
 import BaiduSearchBar from "@/components/baidu-search-bar"
 import { toolsData, categories, getAllTools } from "@/lib/tools-data"
 
-// 从全站工具数据中筛选热门推荐（featured: true）
-const hotTools = getAllTools()
-  .filter((tool) => tool.featured)
-  .slice(0, 12)
+// 从全站工具数据中筛选热门推荐：含 addedAt 的按时间新到旧优先，其余按全站顺序补齐，取前 12
+const allFeatured = getAllTools().filter((tool) => tool.featured)
+const featuredWithDate = allFeatured
+  .filter((t) => typeof t.addedAt === "number")
+  .sort((a, b) => (b.addedAt ?? 0) - (a.addedAt ?? 0))
+const featuredNoDate = allFeatured.filter(
+  (t) => typeof t.addedAt !== "number"
+)
+const hotTools = [...featuredWithDate, ...featuredNoDate].slice(0, 12)
 
 // 从全站工具数据中筛选“最新收录”：按 addedAt 时间戳倒序排列，取前 12 个
 const newTools = getAllTools()

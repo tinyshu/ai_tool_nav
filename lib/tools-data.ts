@@ -349,6 +349,16 @@ export const toolsData: Record<string, ToolItem[]> = {
     { name: "Copy.ai", description: "AI文案生成工具", icon: "Co", color: "bg-gradient-to-br from-purple-400 to-pink-500", url: "https://www.copy.ai" ,image:"copy.png"},
     { name: "Writesonic", description: "AI内容创作平台", icon: "W", color: "bg-gradient-to-br from-blue-500 to-purple-500", url: "https://writesonic.com" ,image:"writesonic.png"},
     { name: "秘塔写作猫", description: "AI中文写作助手", icon: "秘", color: "bg-gradient-to-br from-orange-400 to-red-500", url: "https://xiezuocat.com", image:"xiezuocat.png" },
+    {
+      name: "智写AI",
+      description: "AI留学文书写作与英文降重平台",
+      icon: "智",
+      color: "bg-gradient-to-br from-cyan-500 to-teal-600",
+      url: "https://www.wisdomb.cn",
+      featured: true,
+      image: "zhixie.png",
+      addedAt: 1773724380,
+    },
   ],
   AI对话工具: [
     { name: "ChatGPT", description: "OpenAI推出的AI对话助手", icon: "G", color: "bg-gradient-to-br from-green-500 to-teal-500", url: "https://chat.openai.com", image: "chatgpt.png" },
