@@ -29,6 +29,7 @@ import { cn } from "@/lib/utils"
 import ThemeToggle from "@/components/theme-toggle"
 
 const categories = [
+  { id: "entertainment", label: "AI娱乐工具", icon: Gamepad2 },
   { id: "convenience", label: "便民工具", icon: Wrench },
   { id: "magic", label: "神奇网站", icon: Sparkles },
   { id: "office", label: "AI办公工具", icon: Briefcase },
@@ -42,7 +43,6 @@ const categories = [
   { id: "video", label: "AI视频工具", icon: Video },
   { id: "design", label: "AI设计工具", icon: Palette },
   { id: "audio", label: "AI音频工具", icon: Volume2 },
-  { id: "entertainment", label: "AI娱乐工具", icon: Gamepad2 },
   { id: "other", label: "其他AI工具", icon: MoreHorizontal },
 ]
 

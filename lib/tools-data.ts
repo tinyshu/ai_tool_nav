@@ -36,15 +36,17 @@ export const subCategories: Record<string, string[]> = {
 }
 
 export const categoryOrder = [
+  "AI娱乐工具",
   "便民工具",
   "神奇网站",
   "AI办公工具", "AI图像工具", "AI编程工具", "AI写作工具", "AI对话工具",
   "AI开发平台", "AI搜索引擎", "AI翻译工具", "AI视频工具", "AI设计工具",
-  "AI音频工具", "AI娱乐工具",
+  "AI音频工具",
   "其他AI工具",
 ] as const
 
 export const categories = [
+  { id: "entertainment", name: "AI娱乐工具" },
   { id: "convenience", name: "便民工具" },
   { id: "magic", name: "神奇网站" },
   { id: "office", name: "AI办公工具" },
@@ -58,7 +60,6 @@ export const categories = [
   { id: "video", name: "AI视频工具" },
   { id: "design", name: "AI设计工具" },
   { id: "audio", name: "AI音频工具" },
-  { id: "entertainment", name: "AI娱乐工具" },
   { id: "other", name: "其他AI工具" },
 ] as const
 
@@ -313,8 +314,8 @@ export const toolsData: Record<string, ToolItem[]> = {
   ],
   AI图像工具: [
     {
-      name: "蕉点AII",
-      description: "蕉电商全品类出图专家",
+      name: "蕉点AI",
+      description: "电商全品类出图专家",
       icon: "蕉",
       color: "bg-gradient-to-br from-cyan-500 to-teal-600",
       url: "http://www.jiaodianai.com/invite?inviteCode=0H23g1Gw",
@@ -417,6 +418,16 @@ export const toolsData: Record<string, ToolItem[]> = {
     { name: "ElevenLabs", description: "AI语音合成工具", icon: "11", color: "bg-gradient-to-br from-gray-800 to-gray-900", url: "https://elevenlabs.io" ,image:"elevenlabs.png"},
   ],
   AI娱乐工具: [
+    {
+      name: "免费小游戏站",
+      description: "最酷最好玩的小游戏站",
+      icon: "游",
+      color: "bg-gradient-to-br from-cyan-500 to-teal-600",
+      url: "https://crazygames99.top/",
+      featured: true,
+      image: "tinygames.png",
+      addedAt: 1775000000,
+    },
     { name: "Character.AI", description: "可以创建虚拟机器人的对话平台", icon: "C", color: "bg-gradient-to-br from-purple-500 to-indigo-600", url: "https://character.ai", featured: true,image:"character.png" },
     { name: "Replika", description: "AI虚拟伴侣应用", icon: "R", color: "bg-gradient-to-br from-pink-400 to-rose-500", url: "https://replika.ai" ,image:"replika.png"},
     { name: "AI Dungeon", description: "AI驱动的文字冒险游戏", icon: "AD", color: "bg-gradient-to-br from-green-500 to-teal-500", url: "https://aidungeon.com" ,image:"aidungeon.png"},
