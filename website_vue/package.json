@@ -1,0 +1,14 @@
+{
+  "name": "website_vue",
+  "private": true,
+  "version": "1.0.0",
+  "description": "企业官网 + 管理端（Vue + Express）",
+  "scripts": {
+    "install:all": "npm install --prefix frontend && npm install --prefix backend",
+    "dev:frontend": "npm run dev --prefix frontend",
+    "dev:backend": "npm run dev --prefix backend",
+    "build": "npm run build --prefix frontend",
+    "start": "node backend/app.js",
+    "init-db": "npm run init-db --prefix backend"
+  }
+}

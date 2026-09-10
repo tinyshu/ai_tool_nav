@@ -10,8 +10,12 @@ next.user-config.*
 
 # Environment variables
 .env*.local
+website_vue/backend/.env
 
 # Common ignores
 node_modules/
 .next/
 .DS_Store
+website_vue/frontend/dist/
+website_vue/uploads/*
+!website_vue/uploads/.gitkeep
