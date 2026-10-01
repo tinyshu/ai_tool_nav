@@ -314,6 +314,16 @@ export const toolsData: Record<string, ToolItem[]> = {
   ],
   AI图像工具: [
     {
+      name: "画廊工坊",
+      description: "经过真实验证的文生图提示词",
+      icon: "画",
+      color: "bg-gradient-to-br from-cyan-500 to-teal-600",
+      url: "https://drawdesk.cn/",
+      featured: true,
+      image: "hualang.jpeg",
+      addedAt: 1790859518,
+    },
+    {
       name: "蕉点AI",
       description: "电商全品类出图专家",
       icon: "蕉",
@@ -418,16 +428,6 @@ export const toolsData: Record<string, ToolItem[]> = {
     { name: "ElevenLabs", description: "AI语音合成工具", icon: "11", color: "bg-gradient-to-br from-gray-800 to-gray-900", url: "https://elevenlabs.io" ,image:"elevenlabs.png"},
   ],
   AI娱乐工具: [
-    {
-      name: "免费小游戏站",
-      description: "最酷最好玩的小游戏站",
-      icon: "游",
-      color: "bg-gradient-to-br from-cyan-500 to-teal-600",
-      url: "https://crazygames99.top/",
-      featured: true,
-      image: "tinygames.png",
-      addedAt: 1775000000,
-    },
     { name: "Character.AI", description: "可以创建虚拟机器人的对话平台", icon: "C", color: "bg-gradient-to-br from-purple-500 to-indigo-600", url: "https://character.ai", featured: true,image:"character.png" },
     { name: "Replika", description: "AI虚拟伴侣应用", icon: "R", color: "bg-gradient-to-br from-pink-400 to-rose-500", url: "https://replika.ai" ,image:"replika.png"},
     { name: "AI Dungeon", description: "AI驱动的文字冒险游戏", icon: "AD", color: "bg-gradient-to-br from-green-500 to-teal-500", url: "https://aidungeon.com" ,image:"aidungeon.png"},
