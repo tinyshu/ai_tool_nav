@@ -360,6 +360,7 @@ export const toolsData: Record<string, ToolItem[]> = {
     { name: "Replit AI", description: "在线AI编程环境", icon: "R", color: "bg-gradient-to-br from-orange-400 to-amber-500", url: "https://replit.com",image:"replitai.png" },
     { name: "v0", description: "Vercel推出的AI前端开发助手", icon: "v0", color: "bg-gradient-to-br from-gray-800 to-gray-900", url: "https://v0.dev",image:"v0.png" },
     { name: "Bolt", description: "AI全栈开发助手", icon: "B", color: "bg-gradient-to-br from-blue-500 to-indigo-600", url: "https://bolt.new",image:"bolt.png" },
+    { name: "agent-qa", description: "AI 应用测试：MCP、memidex 持久记忆、经验证的自我改进与可审查证据", icon: "qa", color: "bg-gradient-to-br from-purple-500 to-indigo-600", url: "https://vostride.com" },
   ],
   AI写作工具: [
     { name: "ChatGPT", description: "OpenAI推出的AI对话助手", icon: "G", color: "bg-gradient-to-br from-green-500 to-teal-500", url: "https://chat.openai.com", featured: true, image: "chatgpt.png" },
